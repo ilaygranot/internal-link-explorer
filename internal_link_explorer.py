@@ -6,7 +6,7 @@ def convert_df(df):
  # IMPORTANT: Cache the conversion to prevent computation on every rerun
  return df.to_csv().encode('utf-8')
 
-st.title("Internal Linking Explorer 🎃🎈")
+st.title("Internal Linking Explorer 🎃")
 
 # Handle Download Button State
 can_download = False
