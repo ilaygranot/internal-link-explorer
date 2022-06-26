@@ -12,7 +12,7 @@ st.title("Internal Linking Explorer 🎃")
 can_download = False
 csv = None
 
-# Upload Excel File
+# Upload excel File
 uploaded_file = st.file_uploader("Choose an .xlsx file", "xlsx")
 have_file = False
 if uploaded_file is not None:
