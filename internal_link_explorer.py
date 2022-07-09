@@ -19,11 +19,11 @@ uploaded_df_xpath = None
 # Upload excel File
 col1, col2 = st.columns(2)
 with col1:
-    uploaded_df_cluster = st.file_uploader("Upload privat_data file", "csv")
+    uploaded_df_cluster = st.file_uploader("Upload privat_data.csv file", "csv")
     if uploaded_df_cluster is not None:
         df_cluster = pd.read_csv(uploaded_df_cluster)
 with col2:
-    uploaded_df_xpath = st.file_uploader("Upload sf_data file", "csv")
+    uploaded_df_xpath = st.file_uploader("Upload sf_data.csv file", "csv")
     if uploaded_df_xpath is not None:
         df_xpath = pd.read_csv(uploaded_df_xpath)
 
