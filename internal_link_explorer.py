@@ -6,7 +6,7 @@ def convert_df_cluster(df_cluster):
  # IMPORTANT: Cache the conversion to prevent computation on every rerun
  return df_cluster.to_csv().encode('utf-8')
 
-st.title("Internal Linking Explorer 🎃")
+st.title("Internal Linking Explorer 🎯")
 
 # Handle Download Button State
 can_download = False
@@ -19,11 +19,11 @@ uploaded_df_xpath = None
 # Upload excel File
 col1, col2 = st.columns(2)
 with col1:
-    uploaded_df_cluster = st.file_uploader("Choose a cluster .csv file", "csv")
+    uploaded_df_cluster = st.file_uploader("Upload privat_data file", "csv")
     if uploaded_df_cluster is not None:
         df_cluster = pd.read_csv(uploaded_df_cluster)
 with col2:
-    uploaded_df_xpath = st.file_uploader("Choose a xpath .csv file", "csv")
+    uploaded_df_xpath = st.file_uploader("Upload sf_data file", "csv")
     if uploaded_df_xpath is not None:
         df_xpath = pd.read_csv(uploaded_df_xpath)
 
