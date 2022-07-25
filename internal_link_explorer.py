@@ -53,8 +53,6 @@ with st.form("form"):
                 df_xpath.rename(columns={df_xpath.columns[4]: "Text" },inplace=True)
                 # merge the two dataframes on address column base on right join and call it df_merge
                 df_merge = pd.merge(df_cluster, df_xpath, on="Address", how="right")
-                # if value = NaN then replace with "No Crawl Data" 
-                df_merge.fillna("No Crawl Data", inplace=True)
                 # Filter by Target Page & Target Keyword - See all pages that NOT link to target page AND CONTAIN the target keywrods
                 lp_filter = ~df_xpath['Body'].str.contains(target_page)
                 kw_filter = df_xpath['Text'].str.contains(target_kw, case=False)
